@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+input[type="password"] {
+  margin-bottom: 12px;
+}
+
+img {
+  margin-bottom: 12px;
+}
+
+h1 {
+  margin-bottom: 12px;
+}
+
+input[type="text"] {
+  margin-bottom: 12px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #a1fcff, #ef738c);
+  font-family: Arial, sans-serif;
+}
+form label {
+  display: block;
+  margin: 10px 4;
+  font-size: 0.9em;
+}
+form button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(to right, #ed7ecc, #d35e3b);
+  border: none;
+  color: rgb(0, 0, 0);
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+h1 {
+  font-family: "Helvetica", sans-serif;
+}

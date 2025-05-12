@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+}
+body {
+  background: #fff;
+}
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 650px;
+  height: 300px;
+  text-align: center;
+  line-height: 400px;
+  color: #fff;
+  background: #6d2e2e;
+  font-size: 100px;
+  text-transform: uppercase;
+  cursor: pointer;
+  z-index: 2;
+  overflow: hidden;
+}
+h1::before,
+h1::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.9s;
+}
+h1::before {
+  background: url(https://mobobyte.com/wp-content/uploads/2020/08/Chicago_Skyline_2.png);
+  background-size: 650px 400px;
+  background-position: 0 -100px;
+  z-index: -1;
+}
+h1::after {
+  background: url(https://depauliaonline.com/wp-content/uploads/2018/04/skyline-900x409.png);
+  background-size: 650px 400px;
+  background-position: 0 -11px;
+  z-index: 3;
+}
+h1.active::before,
+h1.active::after {
+  top: 0;
+}
+h1.active::before {
+  animation: animateBefore 40s infinite linear;
+}
+h1.active::after {
+  animation: animateAfter 30s infinite linear;
+}
+
+@keyframes animateBefore {
+  0% {
+    background-position: 0 -100px;
+  }
+  100% {
+    background-position: calc(-20 * 200px) -100px;
+  }
+}
+@keyframes animateAfter {
+  0% {
+    background-position: 0 -11px;
+  }
+  100% {
+    background-position: calc(-20 * 200px) -11px;
+  }
+}

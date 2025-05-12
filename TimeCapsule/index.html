@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Time Capsule</title>
+    <style>
+      body {
+        background: #eb9898;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .envelope {
+        position: relative;
+        width: 300px;
+        height: 200px;
+        background: #cb5656;
+        border: 2px solid #efd467;
+        box-shadow: 0 5px 15px rgba(207, 112, 112, 0.2);
+        overflow: hidden;
+        cursor: pointer;
+        transition: all 0.5s ease;
+      }
+      .envelope::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #cecf90;
+        clip-path: polygon(0 0, 50% 50%, 100% 0);
+        transition: transform 0.5s ease;
+        transform-origin: top;
+        z-index: 2;
+      }
+      .message {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        background: #fff;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        z-index: 1;
+      }
+
+      .envelope:hover::before {
+        transform: rotateX(180deg);
+      }
+
+      .envelope:hover .message {
+        opacity: 1;
+      }
+
+      h2 {
+        margin-top: 0;
+        color: #0f0d0d;
+      }
+
+      p {
+        color: #b0382f;
+        line-height: 1.4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="envelope">
+      <div class="message">
+        <h2>Hey You!</h2>
+        <p>Hope your day will be filled with happiness and joy</p>
+        <p>
+          With love,<br />
+          QuantumNique Solutions ✨
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
